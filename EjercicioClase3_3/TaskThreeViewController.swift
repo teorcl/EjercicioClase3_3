@@ -13,27 +13,46 @@ class TaskThreeViewController: UIViewController {
         static let initialNumber = 1
         static let finalNumber = 10
         static let winnerNumber = 7
+        static let win = "BINGO"
     }
     
-   
-    @IBOutlet weak var numberRandomLabel: UILabel!
+    
+    @IBOutlet weak var randomNumberLabel: UILabel!
     @IBOutlet weak var hideButton: UIButton!
+    
+    var randomNumber = Const.initialNumber
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
-
+    
     @IBAction func nextButtonPressed(_ sender: Any) {
-        let number = Int.random(in: Const.initialNumber...Const.finalNumber)
-        if number == Const.winnerNumber{
-            hideButton.setTitle("BINGO", for: .normal)
+        play()
+    }
+    
+    func showNumberRandom(){
+        randomNumberLabel.text = "\(randomNumber)"
+    }
+    
+    func getRandomNumer(){
+        //Cambiar el valor de randomNumber
+        randomNumber = Int.random(in: Const.initialNumber...Const.finalNumber)
+    }
+    
+    func updateButton(){
+        if randomNumber == Const.winnerNumber{
+            hideButton.setTitle(Const.win, for: .normal)
             hideButton.setTitleColor(UIColor.blue, for: .normal)
             hideButton.isEnabled = false
         }
-        numberRandomLabel.text = "\(number)"
+    }
+    
+    func play(){
+        getRandomNumer()
+        updateButton()
+        showNumberRandom()
     }
         
 }
 
-//let number = Int.random(in: initialNumber...finalNumber)

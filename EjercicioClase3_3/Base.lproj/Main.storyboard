@@ -56,7 +56,7 @@
                     </view>
                     <connections>
                         <outlet property="hideButton" destination="88P-Wy-KiK" id="qAm-eL-brw"/>
-                        <outlet property="numberRandomLabel" destination="R0F-9u-ouy" id="rpU-gi-9FR"/>
+                        <outlet property="randomNumberLabel" destination="R0F-9u-ouy" id="rpU-gi-9FR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
