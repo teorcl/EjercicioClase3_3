@@ -13,7 +13,7 @@ class TaskThreeViewController: UIViewController {
         static let initialNumber = 1
         static let finalNumber = 10
         static let winnerNumber = 7
-        static let win = "BINGO"
+        static let win = "BINGO!"
     }
     
     
